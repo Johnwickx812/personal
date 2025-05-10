@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">DipinDev</a>
+        <i class="fa-solid fa-bars menu-toggle"></i>
+        <nav>
+            <a href="index.html"class="active">Home</a>
+            <a href="services.html">Services</a>
+            <a href="skill.html">Skills</a>
+            <a href="education.html">Education</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="home">
+        <div class="home-img">
+            <img src="https://i.imgur.com/oevJ94x.jpeg" alt="men">
+        </div>
+        <div class="home-content">
+            <h1>Hi It's <span>Dipindev</span></h1> 
+            <h3 class="typing-text">I'm a <span></span></h3>
+            <p>I'm a passionate Front-End Developer with a strong foundation in HTML, CSS, and JavaScript. I specialize in creating responsive, user-friendly, and visually appealing web applications.</p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/dipin-dev-824761345?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/Johnwickx812/Dipindevd"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.instagram.com/dipxn.dxv/"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+
+            <a href="https://wa.me/918129385281" class="btn" target="_blank">Hire me</a>
+            <a href="dipin2006.pdf" target="_blank" class="btn">Resume</a>
+        </div>
+    </section> 
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('nav');
+
+        menuToggle.addEventListener('click', () => {
+            nav.classList.toggle('show-nav');
+        });
+    </script>
+</body>
+</html>

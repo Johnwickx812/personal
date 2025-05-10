@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Education - DipinDev</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      text-decoration: none;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: black;
+      color: white;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 1rem 9%;
+      background-color: rgba(0, 0, 0, 0.8);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 3rem;
+      color: red;
+      font-weight: 800;
+    }
+
+    nav {
+      display: flex;
+    }
+
+    nav a {
+      font-size: 1.8rem;
+      color: white;
+      margin-left: 4rem;
+      border-bottom: 3px solid transparent;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: red;
+      border-bottom: 3px solid red;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 3rem;
+      color: red;
+      cursor: pointer;
+    }
+
+    section {
+      min-height: 100vh;
+      padding: 10rem 9% 5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 5rem;
+      margin-bottom: 3rem;
+    }
+
+    span {
+      color: red;
+    }
+
+    .edu-container {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .edu-box {
+      background: #111;
+      border: 2px solid red;
+      padding: 2rem;
+      border-radius: 1rem;
+      width: 90%;
+      max-width: 600px;
+      box-shadow: 0 0 15px red;
+      text-align: left;
+    }
+
+    .edu-box h3 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .edu-box p {
+      font-size: 1.4rem;
+      color: #ccc;
+    }
+
+    @media (max-width: 768px) {
+      html {
+        font-size: 50%;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      nav {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        padding: 20px 0;
+      }
+
+      nav a {
+        display: block;
+        padding: 10px;
+        font-size: 2rem;
+        width: 100%;
+        text-align: center;
+      }
+
+      .show-nav {
+        display: flex;
+      }
+
+      h1 {
+        font-size: 4rem;
+      }
+    }
+    @media (max-width: 480px) {
+  /* Styles for small Android phones */
+  html {
+        font-size: 50%;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      nav {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        padding: 20px 0;
+      }
+
+      nav a {
+        display: block;
+        padding: 10px;
+        font-size: 2rem;
+        width: 100%;
+        text-align: center;
+      }
+
+      .show-nav {
+        display: flex;
+      }
+
+      h1 {
+        font-size: 4rem;
+      }
+}
+@media (max-width: 1024px) {
+  /* Styles for large phones/tablets */
+  html {
+        font-size: 50%;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      nav {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        padding: 20px 0;
+      }
+
+      nav a {
+        display: block;
+        padding: 10px;
+        font-size: 2rem;
+        width: 100%;
+        text-align: center;
+      }
+
+      .show-nav {
+        display: flex;
+      }
+
+      h1 {
+        font-size: 4rem;
+      }
+}
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="#" class="logo">DipinDev</a>
+    <i class="fa-solid fa-bars menu-toggle"></i>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="skill.html">Skills</a>
+      <a href="#" class="active">Education</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section>
+    <h1>My <span>Education</span></h1>
+    <div class="edu-container">
+      <div class="edu-box">
+        <h3>Bachelor's in Computer Science</h3>
+        <p>Akshaya College Of Arts and Science, 2023 – 2026</p>
+      </div>
+      <div class="edu-box">
+        <h3>Higher Secondary School</h3>
+        <p>SreeKrishna Higher Secondary School, 2021 – 2023</p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav');
+
+    menuToggle.addEventListener('click', () => {
+      nav.classList.toggle('show-nav');
+    });
+  </script>
+</body>
+</html>

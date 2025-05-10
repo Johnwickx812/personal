@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact - DipinDev</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      text-decoration: none;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    html {
+      font-size: 62.5%;
+    }
+
+    body {
+      background-color: black;
+      color: white;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 1rem 9%;
+      background-color: rgba(0, 0, 0, 0.8);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 3rem;
+      color: red;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    nav {
+      display: flex;
+    }
+
+    nav a {
+      font-size: 1.8rem;
+      color: white;
+      margin-left: 4rem;
+      font-weight: 500;
+      transition: 0.3s ease;
+      border-bottom: 3px solid transparent;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: red;
+      border-bottom: 3px solid red;
+    }
+
+    .menu-toggle {
+      font-size: 3rem;
+      color: red;
+      cursor: pointer;
+      display: none;
+    }
+
+    section {
+      min-height: 100vh;
+      padding: 10rem 9% 5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 5rem;
+      margin-bottom: 3rem;
+    }
+
+    span {
+      color: red;
+    }
+
+    form {
+      width: 100%;
+      max-width: 700px;
+      background: #111;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 0 15px red;
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 1.2rem;
+      margin-bottom: 1.5rem;
+      background: black;
+      border: 2px solid red;
+      color: white;
+      font-size: 1.6rem;
+      border-radius: 1rem;
+    }
+
+    form input:focus,
+    form textarea:focus {
+      outline: none;
+      background: #222;
+    }
+
+    form button {
+      padding: 1rem 2rem;
+      font-size: 1.6rem;
+      background: black;
+      border: 2px solid red;
+      color: red;
+      font-weight: 600;
+      border-radius: 1rem;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    form button:hover {
+      background: red;
+      color: black;
+      box-shadow: 0 0 15px red;
+    }
+
+    @media (max-width: 768px) {
+      html {
+        font-size: 50%;
+      }
+
+      header {
+        padding: 1rem 5%;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      nav {
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.95);
+        padding: 20px 0;
+        display: none;
+      }
+
+      nav a {
+        margin: 10px 0;
+        font-size: 2rem;
+        width: 100%;
+        text-align: center;
+      }
+
+      .show-nav {
+        display: flex;
+      }
+
+      section {
+        padding: 10rem 5% 5rem;
+      }
+
+      h1 {
+        font-size: 4rem;
+      }
+
+      form input,
+      form textarea {
+        font-size: 1.4rem;
+      }
+
+      form button {
+        font-size: 1.4rem;
+      }
+    }
+    @media (max-width: 1024px) {
+  /* Styles for large phones/tablets */
+  html {
+        font-size: 50%;
+      }
+
+      header {
+        padding: 1rem 5%;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      nav {
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.95);
+        padding: 20px 0;
+        display: none;
+      }
+
+      nav a {
+        margin: 10px 0;
+        font-size: 2rem;
+        width: 100%;
+        text-align: center;
+      }
+
+      .show-nav {
+        display: flex;
+      }
+
+      section {
+        padding: 10rem 5% 5rem;
+      }
+
+      h1 {
+        font-size: 4rem;
+      }
+
+      form input,
+      form textarea {
+        font-size: 1.4rem;
+      }
+
+      form button {
+        font-size: 1.4rem;
+      }
+}
+@media (max-width: 480px) {
+  /* Styles for small Android phones */
+  html {
+        font-size: 50%;
+      }
+
+      header {
+        padding: 1rem 5%;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      nav {
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.95);
+        padding: 20px 0;
+        display: none;
+      }
+
+      nav a {
+        margin: 10px 0;
+        font-size: 2rem;
+        width: 100%;
+        text-align: center;
+      }
+
+      .show-nav {
+        display: flex;
+      }
+
+      section {
+        padding: 10rem 5% 5rem;
+      }
+
+      h1 {
+        font-size: 4rem;
+      }
+
+      form input,
+      form textarea {
+        font-size: 1.4rem;
+      }
+
+      form button {
+        font-size: 1.4rem;
+      }
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Header with Nav -->
+  <header>
+    <a href="#" class="logo">DipinDev</a>
+    <i class="fa-solid fa-bars menu-toggle"></i>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="skill.html">Skills</a>
+      <a href="education.html">Education</a>
+      <a href="#" class="active">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Contact Section -->
+  <section>
+    <h1>Contact <span>Me</span></h1>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <input type="text" placeholder="Subject" required>
+      <textarea rows="6" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- JavaScript for Toggle -->
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav');
+
+    menuToggle.addEventListener('click', () => {
+      nav.classList.toggle('show-nav');
+    });
+  </script>
+</body>
+</html>
